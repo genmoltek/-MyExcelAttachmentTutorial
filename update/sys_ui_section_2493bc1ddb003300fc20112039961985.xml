@@ -1,0 +1,240 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update>
+    <sys_ui_section caption="" section_id="2493bc1ddb003300fc20112039961985" sys_domain="global" table="x_237223_myexcelat_myexcelattachmentsunpackedtable" version="3" view="">
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>.begin_split</element>
+            <position>0</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2019-03-06 15:45:01</sys_created_on>
+            <sys_id>a493f815db403300fc201120399619d7</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_237223_myexcelat_myexcelattachmentsunpackedtable" sys_domain="global" view="Default view">2493bc1ddb003300fc20112039961985</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2019-03-06 15:45:01</sys_updated_on>
+            <sys_user/>
+            <type>.begin_split</type>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>address</element>
+            <position>1</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2019-03-06 15:45:01</sys_created_on>
+            <sys_id>2c93f815db403300fc201120399619d7</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_237223_myexcelat_myexcelattachmentsunpackedtable" sys_domain="global" view="Default view">2493bc1ddb003300fc20112039961985</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2019-03-06 15:45:01</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>city</element>
+            <position>2</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2019-03-06 15:45:01</sys_created_on>
+            <sys_id>ac93f815db403300fc201120399619d7</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_237223_myexcelat_myexcelattachmentsunpackedtable" sys_domain="global" view="Default view">2493bc1ddb003300fc20112039961985</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2019-03-06 15:45:01</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>company_name</element>
+            <position>3</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2019-03-06 15:45:01</sys_created_on>
+            <sys_id>2093f815db403300fc201120399619d8</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_237223_myexcelat_myexcelattachmentsunpackedtable" sys_domain="global" view="Default view">2493bc1ddb003300fc20112039961985</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2019-03-06 15:45:01</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>county</element>
+            <position>4</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2019-03-06 15:45:01</sys_created_on>
+            <sys_id>a093f815db403300fc201120399619d8</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_237223_myexcelat_myexcelattachmentsunpackedtable" sys_domain="global" view="Default view">2493bc1ddb003300fc20112039961985</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2019-03-06 15:45:01</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>first_name</element>
+            <position>5</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2019-03-06 15:45:01</sys_created_on>
+            <sys_id>2493f815db403300fc201120399619d8</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_237223_myexcelat_myexcelattachmentsunpackedtable" sys_domain="global" view="Default view">2493bc1ddb003300fc20112039961985</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2019-03-06 15:45:01</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>last_name</element>
+            <position>6</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2019-03-06 15:45:01</sys_created_on>
+            <sys_id>a493f815db403300fc201120399619d8</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_237223_myexcelat_myexcelattachmentsunpackedtable" sys_domain="global" view="Default view">2493bc1ddb003300fc20112039961985</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2019-03-06 15:45:01</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>.split</element>
+            <position>7</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2019-03-06 15:45:01</sys_created_on>
+            <sys_id>2893f815db403300fc201120399619d8</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_237223_myexcelat_myexcelattachmentsunpackedtable" sys_domain="global" view="Default view">2493bc1ddb003300fc20112039961985</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2019-03-06 15:45:01</sys_updated_on>
+            <sys_user/>
+            <type>.split</type>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>email</element>
+            <position>8</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2019-03-06 15:45:01</sys_created_on>
+            <sys_id>a893f815db403300fc201120399619d8</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_237223_myexcelat_myexcelattachmentsunpackedtable" sys_domain="global" view="Default view">2493bc1ddb003300fc20112039961985</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2019-03-06 15:45:01</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>phone1</element>
+            <position>9</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2019-03-06 15:45:01</sys_created_on>
+            <sys_id>2c93f815db403300fc201120399619d8</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_237223_myexcelat_myexcelattachmentsunpackedtable" sys_domain="global" view="Default view">2493bc1ddb003300fc20112039961985</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2019-03-06 15:45:01</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>phone2</element>
+            <position>10</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2019-03-06 15:45:01</sys_created_on>
+            <sys_id>ac93f815db403300fc201120399619d8</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_237223_myexcelat_myexcelattachmentsunpackedtable" sys_domain="global" view="Default view">2493bc1ddb003300fc20112039961985</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2019-03-06 15:45:01</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>state</element>
+            <position>11</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2019-03-06 15:45:01</sys_created_on>
+            <sys_id>2093f815db403300fc201120399619d9</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_237223_myexcelat_myexcelattachmentsunpackedtable" sys_domain="global" view="Default view">2493bc1ddb003300fc20112039961985</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2019-03-06 15:45:01</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>web</element>
+            <position>12</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2019-03-06 15:45:01</sys_created_on>
+            <sys_id>a093f815db403300fc201120399619d9</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_237223_myexcelat_myexcelattachmentsunpackedtable" sys_domain="global" view="Default view">2493bc1ddb003300fc20112039961985</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2019-03-06 15:45:01</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>zip</element>
+            <position>13</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2019-03-06 15:45:01</sys_created_on>
+            <sys_id>2493f815db403300fc201120399619d9</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_237223_myexcelat_myexcelattachmentsunpackedtable" sys_domain="global" view="Default view">2493bc1ddb003300fc20112039961985</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2019-03-06 15:45:01</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>.end_split</element>
+            <position>14</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2019-03-06 15:45:01</sys_created_on>
+            <sys_id>a493f815db403300fc201120399619d9</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_237223_myexcelat_myexcelattachmentsunpackedtable" sys_domain="global" view="Default view">2493bc1ddb003300fc20112039961985</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2019-03-06 15:45:01</sys_updated_on>
+            <sys_user/>
+            <type>.end_split</type>
+        </sys_ui_element>
+        <sys_ui_section action="INSERT_OR_UPDATE">
+            <caption/>
+            <header>false</header>
+            <name>x_237223_myexcelat_myexcelattachmentsunpackedtable</name>
+            <roles/>
+            <sys_class_name>sys_ui_section</sys_class_name>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2019-03-06 15:45:01</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>2493bc1ddb003300fc20112039961985</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>x_237223_myexcelat_myexcelattachmentsunpackedtable</sys_name>
+            <sys_overrides/>
+            <sys_package display_value="MyExcelAttachmentTutorial" source="x_237223_myexcelat">15ab4851db003300fc201120399619b7</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="MyExcelAttachmentTutorial">15ab4851db003300fc201120399619b7</sys_scope>
+            <sys_update_name>sys_ui_section_2493bc1ddb003300fc20112039961985</sys_update_name>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2019-03-06 15:45:01</sys_updated_on>
+            <sys_user/>
+            <title>true</title>
+            <view display_value="Default view" name="NULL">Default view</view>
+            <view_name/>
+        </sys_ui_section>
+    </sys_ui_section>
+</record_update>

@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="sc_cat_item_producer">
+    <sc_cat_item_producer action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <availability>on_desktop</availability>
+        <billable>false</billable>
+        <can_cancel>false</can_cancel>
+        <category display_value="Services">109f0438c6112276003ae8ac13e7009d</category>
+        <cost>0</cost>
+        <custom_cart/>
+        <delivery_plan display_value="DEFAULT">523da512c611228900811a37c97c2014</delivery_plan>
+        <delivery_plan_script/>
+        <delivery_time>1970-01-03 00:00:00</delivery_time>
+        <description/>
+        <entitlement_script/>
+        <group/>
+        <icon/>
+        <ignore_price>true</ignore_price>
+        <image/>
+        <list_price>0</list_price>
+        <location/>
+        <meta/>
+        <mobile_hide_price>false</mobile_hide_price>
+        <mobile_picture/>
+        <mobile_picture_type>use_desktop_picture</mobile_picture_type>
+        <model/>
+        <name>MyRecordProducerTest</name>
+        <no_cart>false</no_cart>
+        <no_order>false</no_order>
+        <no_order_now>false</no_order_now>
+        <no_proceed_checkout>false</no_proceed_checkout>
+        <no_quantity>false</no_quantity>
+        <no_search>false</no_search>
+        <omit_price>false</omit_price>
+        <order>0</order>
+        <ordered_item_link/>
+        <picture/>
+        <preview>JavaScript: popupOpenStandard("com.glideapp.servicecatalog_cat_item_view.do?v=1&amp;sysparm_id=8cd92b84db103300fc201120399619b7&amp;sysparm_preview=true", "summary");</preview>
+        <price>0</price>
+        <recurring_frequency/>
+        <recurring_price>0</recurring_price>
+        <redirect_url>generated_record</redirect_url>
+        <roles/>
+        <sc_catalogs>e0d08b13c3330100c8b837659bba8fb4</sc_catalogs>
+        <sc_ic_item_staging/>
+        <sc_ic_version/>
+        <script><![CDATA[// Verify attachment is included and in correct format
+var myDate = new GlideDateTime();
+gs.addInfoMessage("Im inside MyRecordProducer at DateTime: " + myDate + " Current SysId: " + current.syd_id);
+gs.info("Im inside MyRecordProducer at DateTime: " + myDate + " Current SysId: " + current.syd_id);
+gs.info("Producer.sys_id = " + producer.sys_id);
+/***************
+var gr2 = new GlideRecord("sys_attachment");
+gr2.addQuery("table_sys_id", current.sys_id);
+var oC = gr2.addQuery("table_name", "sys_data_source");
+oC.addOrCondition("table_name", "sc_cart_item");
+gr2.query();
+if (!gr2.next()) {
+	gs.addErrorMessage("You must attach a file to submit. Your import submission has been aborted.");
+	gs.error("You must attach a file to submit. Your import submission has been aborted.");
+	current.setAbortAction(true);
+	producer.redirect="com.glideapp.servicecatalog_cat_item_view.do?v=1&amp;sysparm_id=&lt;SysID of the Record Producer&gt;";
+} 
+else 
+{
+	//Get the glide record for the selected import type
+	var gr = new GlideRecord('u_pmy_imp_wiz_cfg');
+	gr.addQuery('sys_id',producer.import_type);
+	gr.query();
+	if(gr.next())
+	{
+		if(gr2.getRowCount() > 1)
+		{
+			gs.addErrorMessage("You may only attach one file at a time for this import wizard. Your import submission has been aborted.");
+			current.setAbortAction(true);
+			producer.redirect="com.glideapp.servicecatalog_cat_item_view.do?v=1&amp;sysparm_id=&lt;SysID of the Record Producer&gt;";
+		}
+		//check to make sure the file format is correct on the attachment
+		var passedFormatCheck = false;
+		var errorCaught = true;
+		if (gr.u_format == 'CSV')
+		{
+			if (gr2.file_name.endsWith('.csv') == true){
+				passedFormatCheck = true;
+			}
+			else
+			{
+				gs.addErrorMessage("This import type is expecting submission of a CSV file (.csv), but a different file format was attached. Your import submission has been aborted.");
+				current.setAbortAction(true);
+				producer.redirect="com.glideapp.servicecatalog_cat_item_view.do?v=1&amp;sysparm_id=&lt;SysID of the Record Producer&gt;";
+			}
+		}
+		else if (gr.u_format == 'Excel')
+		{
+			if(gr2.file_name.endsWith('.xls') == true)
+			{
+				passedFormatCheck = true;
+			}
+			else
+			{
+				gs.addErrorMessage("This import type is expecting submission of an Excel file (.xls), but a different file format was attached. Your import submission has been aborted.");
+				current.setAbortAction(true);
+				producer.redirect="com.glideapp.servicecatalog_cat_item_view.do?v=1&amp;sysparm_id=&lt;SysID of the Record Producer&gt;";
+			}
+		}
+
+		if(passedFormatCheck == true)
+		{
+			// Create data source record (based on form import type selection record)
+
+			current.name = gr.u_ds_naming + '_' + gs.nowDateTime();
+			current.format = gr.u_format;
+			current.import_set_table_name = gr.u_import_set.name;
+			current.header_row = gr.u_header_row;
+			current.sheet_number = gr.u_sheet_number;
+			current.file_retrieval_method = "Attachment";
+			current.type = "File";
+
+			//Data source needs to be created before we can trigger the commands below, so we create the record outside of the normal record producer method
+			current.insert();
+
+			// Process file into data source record
+			var loader = new GlideImportSetLoader();
+			var importSetRec = loader.getImportSetGr(current);
+
+			// Import data from data source to import set table (based on form import type selection record)
+			var ranload = loader.loadImportSetTable(importSetRec, current);
+			importSetRec.state = "loaded";
+			importSetRec.update();
+
+			// Start transform map (logic for logging exceptions within the transform map scripts, and will trigger an email once complete to the import submitter with an outline of the logged errors and warnings)
+			var transformMapID = gr.u_transform;
+			var transformWorker = new GlideImportSetTransformerWorker(importSetRec.sys_id, transformMapID);
+			transformWorker.setBackground(true);
+			transformWorker.start();
+
+			//Inform the user that a email outlining the status of the import will be sent once the import is complete
+			gs.addInfoMessage("Your import file has been submitted. An email will be sent to you once the import is completed to outline any errors or warnings encountered while importing.");
+			producer.redirect="home.do";
+		}
+	}
+	else
+	{
+		gs.addErrorMessage('Something went wrong with the import. Please contact a system admin to investigate.');
+	}
+
+	// Since we inserted the data source already, abort additional insert by record producer
+	current.setAbortAction(true);
+}
+**********/]]></script>
+        <short_description>First Record Producer test</short_description>
+        <show_variable_help_on_load>false</show_variable_help_on_load>
+        <start_closed>false</start_closed>
+        <sys_class_name>sc_cat_item_producer</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2019-03-15 18:04:33</sys_created_on>
+        <sys_id>8cd92b84db103300fc201120399619b7</sys_id>
+        <sys_mod_count>9</sys_mod_count>
+        <sys_name>MyRecordProducerTest</sys_name>
+        <sys_package display_value="MyExcelAttachmentTutorial" source="x_237223_myexcelat">15ab4851db003300fc201120399619b7</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="MyExcelAttachmentTutorial">15ab4851db003300fc201120399619b7</sys_scope>
+        <sys_update_name>sc_cat_item_producer_8cd92b84db103300fc201120399619b7</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2019-03-17 20:11:45</sys_updated_on>
+        <table_name>x_237223_myexcelat_myexcelattachmentstable</table_name>
+        <template/>
+        <type>item</type>
+        <use_sc_layout>true</use_sc_layout>
+        <vendor/>
+        <view/>
+        <visible_bundle>true</visible_bundle>
+        <visible_guide>true</visible_guide>
+        <visible_standalone>true</visible_standalone>
+        <workflow/>
+    </sc_cat_item_producer>
+    <sys_translated_text action="delete_multiple" query="documentkey=8cd92b84db103300fc201120399619b7"/>
+    <fx_price action="delete_multiple" query="id=8cd92b84db103300fc201120399619b7"/>
+    <fx_price action="INSERT_OR_UPDATE">
+        <amount>0</amount>
+        <currency display_value="USD">USD</currency>
+        <field>price</field>
+        <id>8cd92b84db103300fc201120399619b7</id>
+        <parent/>
+        <reference_amount>0</reference_amount>
+        <reference_currency display_value="USD">USD</reference_currency>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2019-03-15 18:04:33</sys_created_on>
+        <sys_id>88d92b84db103300fc201120399619b8</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2019-03-15 18:04:33</sys_updated_on>
+        <table>sc_cat_item_producer</table>
+        <type>calculated</type>
+    </fx_price>
+    <fx_price action="INSERT_OR_UPDATE">
+        <amount>0</amount>
+        <currency display_value="USD">USD</currency>
+        <field>recurring_price</field>
+        <id>8cd92b84db103300fc201120399619b7</id>
+        <parent/>
+        <reference_amount>0</reference_amount>
+        <reference_currency display_value="USD">USD</reference_currency>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2019-03-15 18:04:33</sys_created_on>
+        <sys_id>c4d92b84db103300fc201120399619b9</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2019-03-15 18:04:33</sys_updated_on>
+        <table>sc_cat_item_producer</table>
+        <type>calculated</type>
+    </fx_price>
+</record_update>

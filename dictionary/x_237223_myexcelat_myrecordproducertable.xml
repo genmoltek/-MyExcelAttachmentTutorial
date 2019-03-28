@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<database>
+    <element label="MyRecordProducerTable" max_length="40" name="x_237223_myexcelat_myrecordproducertable" type="collection">
+        <element label="AttachmentName" max_length="40" name="attachmentname" type="string"/>
+        <element label="FirstName" max_length="40" name="firstname" type="string"/>
+        <element label="LastName" max_length="40" name="lastname" type="string"/>
+    </element>
+</database>

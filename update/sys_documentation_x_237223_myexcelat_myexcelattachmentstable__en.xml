@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update>
+    <sys_documentation element="" label="MyExcelAttachmentsTable" language="en" table="x_237223_myexcelat_myexcelattachmentstable">
+        <sys_documentation action="INSERT_OR_UPDATE">
+            <element/>
+            <help/>
+            <hint/>
+            <label>MyExcelAttachmentsTable</label>
+            <language>en</language>
+            <name>x_237223_myexcelat_myexcelattachmentstable</name>
+            <plural>MyExcelAttachmentsTables</plural>
+            <sys_class_name>sys_documentation</sys_class_name>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2019-03-06 12:53:58</sys_created_on>
+            <sys_id>366c44d1db003300fc20112039961945</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>MyExcelAttachmentsTable</sys_name>
+            <sys_package display_value="MyExcelAttachmentTutorial" source="x_237223_myexcelat">15ab4851db003300fc201120399619b7</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="MyExcelAttachmentTutorial">15ab4851db003300fc201120399619b7</sys_scope>
+            <sys_update_name>sys_documentation_x_237223_myexcelat_myexcelattachmentstable__en</sys_update_name>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2019-03-06 12:53:58</sys_updated_on>
+            <url/>
+            <url_target/>
+        </sys_documentation>
+    </sys_documentation>
+</record_update>

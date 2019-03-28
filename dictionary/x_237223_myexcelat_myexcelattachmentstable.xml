@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<database>
+    <element label="MyExcelAttachmentsTable" max_length="40" name="x_237223_myexcelat_myexcelattachmentstable" type="collection">
+        <element attributes="ignore_filter_on_new=true" default="javascript:global.getNextObjNumberPadded();" label="Number" max_length="40" name="number" type="string"/>
+        <element label="SomeColumn" max_length="40" name="some_column" type="string"/>
+    </element>
+</database>

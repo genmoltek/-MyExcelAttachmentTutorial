@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update sys_domain="global" table="sys_ui_application">
+    <sys_ui_application action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <hint/>
+        <name>MyExcelAttachmentTutorial</name>
+        <order/>
+        <roles>x_237223_myexcelat.user</roles>
+        <sys_class_name>sys_ui_application</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2019-03-06 12:53:57</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>e66cc091db003300fc20112039961981</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>MyExcelAttachmentTutorial</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="MyExcelAttachmentTutorial" source="x_237223_myexcelat">15ab4851db003300fc201120399619b7</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="MyExcelAttachmentTutorial">15ab4851db003300fc201120399619b7</sys_scope>
+        <sys_update_name>sys_ui_application_e66cc091db003300fc20112039961981</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2019-03-06 12:53:57</sys_updated_on>
+    </sys_ui_application>
+</record_update>
